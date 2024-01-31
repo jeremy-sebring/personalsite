@@ -2,6 +2,9 @@
 
 export default function about() {
     return (
-        <p>hi</p>
+        <div className="container">
+            <p>hi</p>
+        </div>
+
     )
 }

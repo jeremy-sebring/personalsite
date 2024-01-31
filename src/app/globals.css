@@ -27,10 +27,6 @@ body {
 
 }
 
-ul {
-  list-style-type: circle;
-}
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
