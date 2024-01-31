@@ -3,7 +3,7 @@
 export default function about() {
     return (
         <div className="container">
-            <p>hi</p>
+            <p>this is an about page?</p>
         </div>
 
     )

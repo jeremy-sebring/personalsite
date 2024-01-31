@@ -1,5 +1,5 @@
 export default function about() {
     return (
-        <p>hi</p>
+        <p>working 9 to 5</p>
     )
 }
