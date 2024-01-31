@@ -19,15 +19,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={inter.className}>
-      <header className="container mx-auto pb-3">
-        <NavBar />
-      </header>
-
-      <main className="container mx-auto">
-        {children}
-        <Analytics />
-        <SpeedInsights />
-      </main>
+      <body className="container mx-auto">
+        <header className="container mx-auto pb-3">
+          <NavBar />
+        </header>
+        <main className="container mx-auto">
+          {children}
+          <Analytics />
+          <SpeedInsights />
+        </main>
+      </body>
     </html>
   );
 }
