@@ -24,6 +24,11 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+
+}
+
+ul {
+  list-style-type: circle;
 }
 
 @layer utilities {
