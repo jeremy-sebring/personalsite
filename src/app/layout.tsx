@@ -1,11 +1,20 @@
 import type { Metadata } from "next";
-import { Noto_Sans_Mono } from "next/font/google";
+import { Noto_Sans_Mono as FontSans } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
-import NavBar from "./components/navbar";
+import NavBar from "../components/navbar";
 
-const inter = Noto_Sans_Mono({ subsets: ["latin-ext"] });
+import { cn } from "../lib/utils";
+import { ThemeSwitcher } from "@/components/ThemeSwitcher";
+import  ThemeProvider  from "./theme-provider";
+
+export const fontSans = FontSans({
+  subsets: ["latin"],
+  variable: "--font-sans",
+});
+
+const inter = FontSans({ subsets: ["latin-ext"] });
 
 export const metadata: Metadata = {
   title: "Jeremy Sebring",
@@ -19,15 +28,24 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={inter.className}>
-      <body className="container mx-auto">
+      <body
+        className={cn(
+          "min-h-screen bg-background font-sans antialiased",
+          fontSans.variable
+        )}
+      >
         <header className="container mx-auto pb-3">
           <NavBar />
         </header>
-        <main className="container mx-auto">
-          {children}
-          <Analytics />
-          <SpeedInsights />
-        </main>
+
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <ThemeSwitcher />
+          <main>
+            {children}
+            <Analytics />
+            <SpeedInsights />
+          </main>
+        </ThemeProvider>
       </body>
     </html>
   );

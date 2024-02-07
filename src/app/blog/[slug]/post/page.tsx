@@ -1,10 +1,4 @@
-interface PostProps {
-    params: {
-        slug: string
-    },
-    searchParams: object
-}
-
+import { PostProps}  from '../../../types';
 
 export default function Post(postProps: PostProps) {
 
