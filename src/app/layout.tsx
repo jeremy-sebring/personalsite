@@ -9,7 +9,7 @@ import { cn } from "../lib/utils";
 import { ThemeSwitcher } from "@/components/ThemeSwitcher";
 import  ThemeProvider  from "./theme-provider";
 
-export const fontSans = FontSans({
+const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
 });
