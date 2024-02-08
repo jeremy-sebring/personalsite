@@ -18,15 +18,15 @@ export interface Card {
 }
 
 export type WorkHistoryCard = {
-    title: string;
-    cardTitle: string;
-    url: string;
-    cardSubtitle: string;
-    cardDetailedText: string;
-    media: {
-        type: string;
-        source: {
-            url: string;
-        };
-    };
+    Title: string;
+    Company: string;
+    CompanyURL: string;
+    CompanyDescription: string;
+    Summary: string;
+    Achievements: WorkHistoryAchievement[];
 };
+
+export type WorkHistoryAchievement = {
+    text: string;
+    isFeatured: boolean;
+}

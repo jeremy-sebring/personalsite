@@ -1,0 +1,187 @@
+[
+  {
+    "Title": "Engineering Manager",
+    "Company": "Trava (Series A Startup)",
+    "CompanyURL": "https://travasecurity.com",
+    "CompanyDescription": "A leading software security company specializing in innovative solutions.",
+    "Summary": "Led the development of a scalable web application, improving client engagement by 30%.",
+    "Achievements": [
+      {
+        "text": "Provided leadership, coaching and mentorship to a geographically distributed, 5-member team to ensure delivery of innovative solutions. Improved employee satisfaction by 20%.",
+        "isFeatured": true
+      },
+      {
+        "text": "Within 2 months, established a shared culture focused on outcomes, leading to a 30% increase in overall productivity.",
+        "isFeatured": false
+      },
+      {
+        "text": "Implemented engineering support process to consolidate customer issues and provide real-time metrics, reducing resolution time to 1 day within 4 weeks of initialization.",
+        "isFeatured": false
+      },
+      {
+        "text": "Leveraging React, Node.js, Express, Typescript, and Go, developed 10+ features and solved multiple bugs per sprint.",
+        "isFeatured": false
+      }
+    ]
+  },
+  {
+    "Title": "Principal Full Stack Engineer (Internal: Head Of Engineering)",
+    "Company": "La Vette (Post-Seed Startup",
+    "CompanyURL": "https://lavette.love",
+    "CompanyDescription": "Revolutionary Video Dating Platform",
+    "Summary": "Oversaw a team of developers in creating a cutting edge video dating platform",
+    "Achievements": [
+      {
+        "text": "Boosted client satisfaction by 10% through effective management of frontend, backend, and mobile teams in delivering a cutting-edge video dating platform using agile methodologies.",
+        "isFeatured": true
+      },
+      {
+        "text": "Leveraged Terraform and AWS to implement a distributed microservice architecture in 2 months, improving platform scalability and performance by 40%.",
+        "isFeatured": false
+      },
+      {
+        "text": "Leveraged Terraform and AWS to implement a distributed microservice architecture in 2 months, improving platform scalability and performance by 40%. Enabled seamless video upload, transcoding, & distribution on web & mobile, resulting in 0.5% playback errors from 30%.",
+        "isFeatured": false
+      }
+    ]
+  },
+  {
+    "Title": "Senior Solutions Architect (Internal: Chief Technology Officer)",
+    "Company": "Guaranty Support Inc",
+    "CompanyURL": "https://guarantysupportinc.com",
+    "CompanyDescription": "",
+    "Summary": "",
+    "Achievements": [
+      {
+        "text": "Led the successful development and deployment of 15 Django/Python web applications, resulting in on-time and under budget project delivery.",
+        "isFeatured": true
+      },
+      {
+        "text": "Increased revenue by over $100,000 ARR within 1 year by creating and leading a Managed Cloud Hosting and Migration Consulting practice to Microsoft Silver Partner.",
+        "isFeatured": false
+      }
+    ]
+  },
+  {
+    "Title": "Director Of Information Technology Services",
+    "Company": "National Conference of Insurance Guaranty Funds",
+    "CompanyURL": "https://www.globaltechsolutions.com",
+    "CompanyDescription": "Global leader in IT services, consulting, and business solutions.",
+    "Summary": "Oversaw a team of developers in creating cutting-edge enterprise software.",
+    "Achievements": [
+      {
+        "text": "Established a personalized one-on-one system, enabling engineers to overcome blockers, receive performance feedback, and plan their professional growth.",
+        "isFeatured": true
+      },
+      {
+        "text": "Applied Agile methodologies, Lean and Kanban, accelerating the department's overall velocity by 15% within 2 months of implementation.",
+        "isFeatured": false
+      }
+    ]
+  },
+  {
+    "Title": "DevOps Engineer",
+    "Company": "National Conference of Insurance Guaranty Funds",
+    "CompanyURL": "https://www.globaltechsolutions.com",
+    "CompanyDescription": "",
+    "Summary": "",
+    "Achievements": [
+      {
+        "text": "Successfully executed a multi-stage migration from VMware to Azure, leading to 4% increase in critical system uptime.",
+        "isFeatured": true
+      },
+      {
+        "text": "Increased efficiency by automating a delivery pipeline, boosting commits by 30% and slashing deployment time to 15 mins.",
+        "isFeatured": false
+      },
+      {
+        "text": "Mentored junior developers, resulting in a 25% increase in team productivity.",
+        "isFeatured": false
+      }
+    ]
+  },
+  {
+    "Title": "Principal Software Engineer",
+    "Company": "Global Tech Solutions",
+    "CompanyURL": "https://www.globaltechsolutions.com",
+    "CompanyDescription": "Global leader in IT services, consulting, and business solutions.",
+    "Summary": "Oversaw a team of developers in creating cutting-edge enterprise software.",
+    "Achievements": [
+      {
+        "text": "Drove the adoption of cloud technologies, achieving a 40% cost reduction.",
+        "isFeatured": true
+      },
+      {
+        "text": "Spearheaded a cross-functional team that delivered a critical project two months ahead of schedule.",
+        "isFeatured": true
+      },
+      {
+        "text": "Mentored junior developers, resulting in a 25% increase in team productivity.",
+        "isFeatured": false
+      }
+    ]
+  },
+  {
+    "Title": "Principal Software Engineer",
+    "Company": "Global Tech Solutions",
+    "CompanyURL": "https://www.globaltechsolutions.com",
+    "CompanyDescription": "Global leader in IT services, consulting, and business solutions.",
+    "Summary": "Oversaw a team of developers in creating cutting-edge enterprise software.",
+    "Achievements": [
+      {
+        "text": "Drove the adoption of cloud technologies, achieving a 40% cost reduction.",
+        "isFeatured": true
+      },
+      {
+        "text": "Spearheaded a cross-functional team that delivered a critical project two months ahead of schedule.",
+        "isFeatured": true
+      },
+      {
+        "text": "Mentored junior developers, resulting in a 25% increase in team productivity.",
+        "isFeatured": false
+      }
+    ]
+  },
+  {
+    "Title": "Principal Software Engineer",
+    "Company": "Global Tech Solutions",
+    "CompanyURL": "https://www.globaltechsolutions.com",
+    "CompanyDescription": "Global leader in IT services, consulting, and business solutions.",
+    "Summary": "Oversaw a team of developers in creating cutting-edge enterprise software.",
+    "Achievements": [
+      {
+        "text": "Drove the adoption of cloud technologies, achieving a 40% cost reduction.",
+        "isFeatured": true
+      },
+      {
+        "text": "Spearheaded a cross-functional team that delivered a critical project two months ahead of schedule.",
+        "isFeatured": true
+      },
+      {
+        "text": "Mentored junior developers, resulting in a 25% increase in team productivity.",
+        "isFeatured": false
+      }
+    ]
+  },
+  {
+    "Title": "Principal Software Engineer",
+    "Company": "Global Tech Solutions",
+    "CompanyURL": "https://www.globaltechsolutions.com",
+    "CompanyDescription": "Global leader in IT services, consulting, and business solutions.",
+    "Summary": "Oversaw a team of developers in creating cutting-edge enterprise software.",
+    "Achievements": [
+      {
+        "text": "Drove the adoption of cloud technologies, achieving a 40% cost reduction.",
+        "isFeatured": true
+      },
+      {
+        "text": "Spearheaded a cross-functional team that delivered a critical project two months ahead of schedule.",
+        "isFeatured": true
+      },
+      {
+        "text": "Mentored junior developers, resulting in a 25% increase in team productivity.",
+        "isFeatured": false
+      }
+    ]
+  }
+]
