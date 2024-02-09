@@ -20,6 +20,8 @@ export interface Card {
 export type WorkHistoryCard = {
     Title: string;
     Company: string;
+    StartDate: string;
+    EndDate: string;
     CompanyURL: string;
     CompanyDescription: string;
     Summary: string;

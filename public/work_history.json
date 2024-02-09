@@ -3,6 +3,8 @@
     "Title": "Engineering Manager",
     "Company": "Trava (Series A Startup)",
     "CompanyURL": "https://travasecurity.com",
+    "StartDate": "08/2023",
+    "EndDate": "02/2024",
     "CompanyDescription": "A leading software security company specializing in innovative solutions.",
     "Summary": "Led the development of a scalable web application, improving client engagement by 30%.",
     "Achievements": [
@@ -26,21 +28,39 @@
   },
   {
     "Title": "Principal Full Stack Engineer (Internal: Head Of Engineering)",
-    "Company": "La Vette (Post-Seed Startup",
+    "Company": "La Vette (Post-Seed Startup)",
     "CompanyURL": "https://lavette.love",
+    "StartDate": "08/2021",
+    "EndDate": "06/2022",
     "CompanyDescription": "Revolutionary Video Dating Platform",
     "Summary": "Oversaw a team of developers in creating a cutting edge video dating platform",
     "Achievements": [
       {
-        "text": "Boosted client satisfaction by 10% through effective management of frontend, backend, and mobile teams in delivering a cutting-edge video dating platform using agile methodologies.",
+        "text": "Lead frontend, backend, and mobile teams (10+ contract engineers) to architect, design, test, implement, optimize, and upkeep using agile methodologies to create a robust and visionary video dating platform. ",
         "isFeatured": true
       },
       {
-        "text": "Leveraged Terraform and AWS to implement a distributed microservice architecture in 2 months, improving platform scalability and performance by 40%.",
+        "text": "Architected and implemented multiple data pipelines to ingest and analyze user behavior within our platform to increase customer retention, satisfaction, and acquisition by 11%.",
         "isFeatured": false
       },
       {
-        "text": "Leveraged Terraform and AWS to implement a distributed microservice architecture in 2 months, improving platform scalability and performance by 40%. Enabled seamless video upload, transcoding, & distribution on web & mobile, resulting in 0.5% playback errors from 30%.",
+        "text": "Architected and tested a Machine Learning Model to provide better matches for our user base.",
+        "isFeatured": false
+      },
+      {
+        "text": "Architected and deployed a distributed microservice architecture backend to power the video-dating platform increasing scalability and performance by 40% utilizing Kubernetes, Helm, Amazon Web Services, and Terraform. ",
+        "isFeatured": false
+      },
+      {
+        "text": "Architected and deployed a distributed microservice architecture backend to power the video-dating platform increasing scalability.",
+        "isFeatured": false
+      },
+      {
+        "text": "Architected and developed an in-transit video transcoding service to enable seamless video upload, transcoding, and distribution to web and mobile devices. The solution reduced the number of playback errors in browsers and on mobile devices from 30% to 0.5%. ",
+        "isFeatured": false
+      },
+      {
+        "text": "At the end of our financial runway solely maintained the company's iOS app, React Frontend, Node.JS microservice backend, and Python workflows.",
         "isFeatured": false
       }
     ]
@@ -49,139 +69,145 @@
     "Title": "Senior Solutions Architect (Internal: Chief Technology Officer)",
     "Company": "Guaranty Support Inc",
     "CompanyURL": "https://guarantysupportinc.com",
+    "StartDate": "01/2020",
+    "EndDate": "06/2022",
     "CompanyDescription": "",
     "Summary": "",
     "Achievements": [
       {
-        "text": "Led the successful development and deployment of 15 Django/Python web applications, resulting in on-time and under budget project delivery.",
+        "text": "Led the technical effort to transfer more than 200,000 claims and 25 million records, and over 25 terabytes of claim and policy images from more than 10 separate insolvent companies utilizing a wide range of technologies: Python, Pandas, Go, Postgres, Microsoft Azure, Amazon Web Services, and VMware ESXi/vCenter.",
         "isFeatured": true
       },
       {
-        "text": "Increased revenue by over $100,000 ARR within 1 year by creating and leading a Managed Cloud Hosting and Migration Consulting practice to Microsoft Silver Partner.",
+        "text": " Architected and assisted in the implementation of an ETL solution utilizing a combination of Django, Python, Celery, Bonobos, and Luigi to extract, transform, and transfer insolvent insurer claims to multiple organizations securely.",
+        "isFeatured": false
+      },
+      {
+        "text": "Architected and led the implementation of 15 separate Django/Python web application projects from initial contact to completion, with no project late, and all projects completed under budget. ",
+        "isFeatured": false
+      },
+      {
+        "text": "Increased revenue by over $100,000 ARR in the first year by creating and leading a Managed Cloud Hosting and Migration Consulting practice to Microsoft Silver Partner. ",
+        "isFeatured": false
+      },
+      {
+        "text": "Created an architecture, project managed, and implemented over 10 projects to move legacy applications, Databases, and infrastructures into Microsoft Azure and AWS.",
+        "isFeatured": false
+      },
+      {
+        "text": "Co-created and led a Cyber Security Consulting and Remediation practice that transformed the security posture for multiple organizations.",
         "isFeatured": false
       }
     ]
   },
   {
     "Title": "Director Of Information Technology Services",
-    "Company": "National Conference of Insurance Guaranty Funds",
-    "CompanyURL": "https://www.globaltechsolutions.com",
-    "CompanyDescription": "Global leader in IT services, consulting, and business solutions.",
-    "Summary": "Oversaw a team of developers in creating cutting-edge enterprise software.",
+    "Company": "the National Conference of Insurance Guaranty Funds",
+    "CompanyURL": "https://www.ncigf.org/",
+    "StartDate": "08/2021",
+    "EndDate": "06/2022",
+    "CompanyDescription": "",
+    "Summary": "",
     "Achievements": [
       {
-        "text": "Established a personalized one-on-one system, enabling engineers to overcome blockers, receive performance feedback, and plan their professional growth.",
+        "text": "Directed a five-member engineering team in enhancing, maintaining, and upgrading the company's comprehensive infrastructure.",
         "isFeatured": true
       },
       {
-        "text": "Applied Agile methodologies, Lean and Kanban, accelerating the department's overall velocity by 15% within 2 months of implementation.",
+        "text": "Developed a Cyber Security questionnaire for member organizations using Flask, Python, and Atlassian's Confluence.",
+        "isFeatured": false
+      },
+      {
+        "text": "Reconfigured team structure and roles, boosting productivity by 20% during my technical absence.",
+        "isFeatured": false
+      },
+      {
+        "text": "Initiated an RFP process, selecting a new Managed Detection and Response Provider, reducing departmental expenditures by 5%.",
+        "isFeatured": false
+      },
+      {
+        "text": "Established a personalized one-on-one system, enabling engineers to overcome blockers, receive performance feedback, and plan their professional growth. ",
+        "isFeatured": false
+      },
+      {
+        "text": " Applied Agile methodologies, Lean and Kanban, accelerating the department's overall velocity by 5%.",
         "isFeatured": false
       }
     ]
   },
   {
     "Title": "DevOps Engineer",
-    "Company": "National Conference of Insurance Guaranty Funds",
-    "CompanyURL": "https://www.globaltechsolutions.com",
+    "Company": "the National Conference of Insurance Guaranty Funds",
+    "CompanyURL": "https://www.ncigf.org/",
+    "StartDate": "04/2019",
+    "EndDate": "08/20221",
     "CompanyDescription": "",
     "Summary": "",
     "Achievements": [
       {
-        "text": "Successfully executed a multi-stage migration from VMware to Azure, leading to 4% increase in critical system uptime.",
+        "text": "Architected, project managed, and implemented a multi-stage migration of the company's entire infrastructure from on-prem VMware vCenter clusters to Microsoft Azure, with the final migration of the database servers executing without unplanned downtime and with no loss of data. The resulting architecture led to business increasing critical system uptime by 4%. ",
         "isFeatured": true
       },
       {
-        "text": "Increased efficiency by automating a delivery pipeline, boosting commits by 30% and slashing deployment time to 15 mins.",
+        "text": "Implemented a fully-automated, continuous delivery pipeline that improved commit speeds by 30%, while reducing deployment time from 4 hours to 15 minutes for the organization’s critical online services. ",
         "isFeatured": false
       },
       {
-        "text": "Mentored junior developers, resulting in a 25% increase in team productivity.",
+        "text": "Designed and implemented the organization's transition from traditional domain controllers and GPOS to MDM based in Microsoft’s Intune. The new management system reduced provisioning time for new laptops from 3 days to less the 24 hours. ",
         "isFeatured": false
-      }
-    ]
-  },
-  {
-    "Title": "Principal Software Engineer",
-    "Company": "Global Tech Solutions",
-    "CompanyURL": "https://www.globaltechsolutions.com",
-    "CompanyDescription": "Global leader in IT services, consulting, and business solutions.",
-    "Summary": "Oversaw a team of developers in creating cutting-edge enterprise software.",
-    "Achievements": [
-      {
-        "text": "Drove the adoption of cloud technologies, achieving a 40% cost reduction.",
-        "isFeatured": true
       },
       {
-        "text": "Spearheaded a cross-functional team that delivered a critical project two months ahead of schedule.",
-        "isFeatured": true
+        "text": " Implemented the migration of the virtual firewall from Fortinet to Palo Alto, an 80% decrease in firewall management time (from 5 hours to 1 hour) and an increase in firewall throughput by 8x.",
+        "isFeatured": false
       },
       {
-        "text": "Mentored junior developers, resulting in a 25% increase in team productivity.",
+        "text": "Created a configuration management system for the organization's servers utilizing Salt Stack, Python, and Azure Functions.",
+        "isFeatured": false
+      },
+      {
+        "text": "Created a monitoring system utilizing Prometheus and Grafana to track the real-time performance of the company’s online services, resulting in increased customer satisfaction. Achieved a 90% decrease in manual administrative assistance requests; an 85% decrease in server provisioning time; and improved mean time to repair server issues by 60%.",
         "isFeatured": false
       }
     ]
   },
   {
-    "Title": "Principal Software Engineer",
-    "Company": "Global Tech Solutions",
-    "CompanyURL": "https://www.globaltechsolutions.com",
-    "CompanyDescription": "Global leader in IT services, consulting, and business solutions.",
-    "Summary": "Oversaw a team of developers in creating cutting-edge enterprise software.",
-    "Achievements": [
-      {
-        "text": "Drove the adoption of cloud technologies, achieving a 40% cost reduction.",
-        "isFeatured": true
-      },
-      {
-        "text": "Spearheaded a cross-functional team that delivered a critical project two months ahead of schedule.",
-        "isFeatured": true
-      },
-      {
-        "text": "Mentored junior developers, resulting in a 25% increase in team productivity.",
-        "isFeatured": false
-      }
-    ]
+    "Title": "Helpdesk Technician",
+    "Company": "the National Conference of Insurance Guaranty Funds",
+    "CompanyURL": "https://www.ncigf.org/",
+    "StartDate": "07/2017",
+    "EndDate": "05/2019",
+    "CompanyDescription": "",
+    "Summary": "",
+    "Achievements": []
   },
   {
-    "Title": "Principal Software Engineer",
-    "Company": "Global Tech Solutions",
-    "CompanyURL": "https://www.globaltechsolutions.com",
-    "CompanyDescription": "Global leader in IT services, consulting, and business solutions.",
-    "Summary": "Oversaw a team of developers in creating cutting-edge enterprise software.",
-    "Achievements": [
-      {
-        "text": "Drove the adoption of cloud technologies, achieving a 40% cost reduction.",
-        "isFeatured": true
-      },
-      {
-        "text": "Spearheaded a cross-functional team that delivered a critical project two months ahead of schedule.",
-        "isFeatured": true
-      },
-      {
-        "text": "Mentored junior developers, resulting in a 25% increase in team productivity.",
-        "isFeatured": false
-      }
-    ]
+    "Title": "Technical Support Engineer Intern",
+    "Company": "Cisco Meraki",
+    "CompanyURL": "https://meraki.cisco.com/",
+    "StartDate": "06/2016",
+    "EndDate": "08/2016",
+    "CompanyDescription": "",
+    "Summary": "",
+    "Achievements": []
   },
   {
-    "Title": "Principal Software Engineer",
-    "Company": "Global Tech Solutions",
-    "CompanyURL": "https://www.globaltechsolutions.com",
-    "CompanyDescription": "Global leader in IT services, consulting, and business solutions.",
-    "Summary": "Oversaw a team of developers in creating cutting-edge enterprise software.",
-    "Achievements": [
-      {
-        "text": "Drove the adoption of cloud technologies, achieving a 40% cost reduction.",
-        "isFeatured": true
-      },
-      {
-        "text": "Spearheaded a cross-functional team that delivered a critical project two months ahead of schedule.",
-        "isFeatured": true
-      },
-      {
-        "text": "Mentored junior developers, resulting in a 25% increase in team productivity.",
-        "isFeatured": false
-      }
-    ]
+    "Title": "IT Intern",
+    "Company": "Purdue Research Foundation",
+    "CompanyURL": "https://prf.org/",
+    "StartDate": "10/2013",
+    "EndDate": "05/2014",
+    "CompanyDescription": "",
+    "Summary": "",
+    "Achievements": []
+  },
+  {
+    "Title": "Technology Intern",
+    "Company": "Litchfield Community School District",
+    "CompanyURL": "https://www.lcusd12.org/",
+    "StartDate": "04/2012",
+    "EndDate": "01/2014",
+    "CompanyDescription": "",
+    "Summary": "",
+    "Achievements": []
   }
 ]

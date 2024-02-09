@@ -21,7 +21,7 @@ export default function work() {
     <div>
         <div className="flex  justify-evenly">
             <div className="pl-16 scroll-m-20 text-2xl tracking-tight lg:text-2xl">
-                <h1 > # Work Experience</h1>
+                <h1># Work Experience</h1>
             </div>
             <MusicToggle/>
         </div>
