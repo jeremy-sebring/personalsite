@@ -5,6 +5,5 @@ export default function about() {
         <div className="container">
             <p>this is an about page?</p>
         </div>
-
     )
 }

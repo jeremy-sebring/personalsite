@@ -39,24 +39,19 @@ async function HostRouting(req: NextRequest) {
         searchParams.length > 0 ? `?${searchParams}` : ""
     }`;
 
-
-    // rewrite root application to `/home` folder
-    if (
-        hostname === "localhost:3000" ||
-        hostname === process.env.NEXT_PUBLIC_ROOT_DOMAIN
-    ) {
-        return NextResponse.rewrite(
-        new URL(`/home${path === "/" ? "" : path}`, req.url)
-        );
+    if ( hostname === "forhire" ) {
+        return  NextResponse.rewrite(new URL(`/work`, req.url));
     }
 
+
+
     // rewrite everything else to `/[domain]/[slug] dynamic route
-    return NextResponse.rewrite(new URL(`/${hostname}${path}`, req.url));
+    //return NextResponse.rewrite(new URL(`/${hostname}${path}`, req.url));
 }
 
 
-/* export default async function middleware(req: NextRequest) {
+export default async function middleware(req: NextRequest) {
 
     return HostRouting(req)
 
-} */
+} 

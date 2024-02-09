@@ -47,7 +47,6 @@ export default function NavBar() {
           </Link>
         </li>
       </ul>
-      <hr />
     </nav>
   );
 }
