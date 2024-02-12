@@ -6,8 +6,8 @@ export default function NavBar() {
   const pathname = usePathname();
 
   return (
-    <nav className="container mx-auto left-0 top-0">
-      <ul className="flex">
+    <nav className="left-0 top-0">
+      <ul className="flex flex-wrap">
         <li className="mr-3">
           <Link
             className={`text-white-100 ${
