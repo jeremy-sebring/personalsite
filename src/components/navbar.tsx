@@ -11,7 +11,7 @@ export default function NavBar() {
         <li className="mr-3">
           <Link
             className={`text-white-100 ${
-              pathname === "/" ? "" : " hover:text-gray-300"
+              pathname === "/" ? "" : "hover:text-gray-300"
             }`}
             href="/"
           >
@@ -22,7 +22,7 @@ export default function NavBar() {
         <li className="mr-3">
         <Link
             className={`text-white-100 ${
-              pathname === "/about" ? "" : " hover:text-gray-300"
+              pathname === "/about" ? "" : "hover:text-gray-300"
             }`}
             href="/about"
           >
@@ -33,7 +33,7 @@ export default function NavBar() {
         <li className="mr-3">
         <Link
             className={`text-white-100 ${
-              pathname === "/work" ? "" : " hover:text-gray-300"
+              pathname === "/work" ? "" : "hover:text-gray-300"
             }`}
             href="/work"
           >
