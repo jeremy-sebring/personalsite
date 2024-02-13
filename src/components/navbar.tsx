@@ -6,7 +6,7 @@ export default function NavBar() {
   const pathname = usePathname();
 
   return (
-    <nav className="left-0 top-0">
+    <nav className="left-0 top-0 sticky">
       <ul className="flex flex-wrap list-none">
         <li className="mr-3">
           <Link
