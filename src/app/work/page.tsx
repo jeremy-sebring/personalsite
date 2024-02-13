@@ -19,10 +19,8 @@ const WorkHistoryJSON = JSON.parse(
 export default function work() {
   return (
     <div>
-        <div className="flex flex-wrap justify-evenly">
-            <div className="scroll-m-20 text-2xl tracking-tight lg:text-2xl">
-                <h1># Work Experience</h1>
-            </div>
+        <div className="flex  flex-wrap justify-evenly content-center">
+            <h2># Work Experience</h2>
             <MusicToggle/>
         </div>
        

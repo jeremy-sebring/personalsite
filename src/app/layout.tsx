@@ -30,17 +30,16 @@ export default function RootLayout({
     <html lang="en" className={inter.className}>
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased",
+          "bg-background max-w-none font-sans antialiased prose prose-slate dark:prose-invert",
           fontSans.variable
         )}
       >
-        <header className="container mx-auto pb-3">
+        <header className="">
           <NavBar />
         </header>
-
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <ThemeSwitcher />
-          <main>
+          <main className="">
             {children}
             <Analytics />
             <SpeedInsights />

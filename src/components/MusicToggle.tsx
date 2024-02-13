@@ -14,7 +14,7 @@ const MusicToggle: FunctionComponent = () => {
 
 
   return (
-      <div className="flex flex-row">
+      <h3 className="flex flex-row">
         <Accordion type="single" collapsible>
             <AccordionItem value="item-1">
                 <AccordionTrigger>### Background Music?</AccordionTrigger>
@@ -26,7 +26,7 @@ const MusicToggle: FunctionComponent = () => {
                 </AccordionContent>
             </AccordionItem>
             </Accordion>
-    </div>
+    </h3>
     );
   }
 

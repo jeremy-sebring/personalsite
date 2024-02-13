@@ -7,7 +7,7 @@ export default function NavBar() {
 
   return (
     <nav className="left-0 top-0">
-      <ul className="flex flex-wrap">
+      <ul className="flex flex-wrap list-none">
         <li className="mr-3">
           <Link
             className={`text-white-100 ${
@@ -18,7 +18,7 @@ export default function NavBar() {
             Home
           </Link>
         </li>
-        <li className="text-white pr-3">|</li>
+        <li className="pr-3">|</li>
         <li className="mr-3">
         <Link
             className={`text-white-100 ${
@@ -29,7 +29,7 @@ export default function NavBar() {
             About
           </Link>
         </li>
-        <li className="text-white pr-3">|</li>
+        <li className="pr-3">|</li>
         <li className="mr-3">
         <Link
             className={`text-white-100 ${
@@ -40,7 +40,7 @@ export default function NavBar() {
             Work
           </Link>
         </li>
-        <li className="text-white pr-3">|</li>
+        <li className="pr-3">|</li>
         <li className="mr-3">
           <Link className="text-white-100 line-through decoration-red-400 decoration-4" href=" ">
             Blog
