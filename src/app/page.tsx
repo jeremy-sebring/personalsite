@@ -1,14 +1,19 @@
+/* eslint-disable react/no-unescaped-entities */
+import LandingText from "@/components/LandingText";
+
+
+
+
 export default function  Home(){
+;
     return (
-        <div className="container mx-auto">
-            
-            <div className="pl-8 scroll-m-20 text-2xl tracking-tight lg:text-2xl">
-                <h1 > # Jeremy Sebring</h1>
-            </div>
-            <br/>
-            <div className="pl-8 scroll-m-20 text-xl tracking-tight lg:text-xl">
-                <p><i>## *Software Engineering Manager*</i> | <i>*Outdoor Enthusiast*</i> </p>
-        </div>
-        </div>
+    <div className="container justify-center text-center fixed top-1/4 left-1/4">
+     <LandingText>
+        <h2># Welcome!</h2>
+        <h2># I'm Jeremy Sebring</h2>
+        <h3 className="italic">*Software Engineering Manager* | *Full Stack Engineer* | *Outdoor Enthusiast*</h3>
+
+     </LandingText>
+    </div>
     );
 }

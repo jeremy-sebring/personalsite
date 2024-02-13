@@ -92,24 +92,19 @@ export default function TimeLineCard(key: string, data: WorkHistoryCard) {
   
   const achievementsExist = data.Achievements.length > 0;
 
-  
-
-
-  
-
   return (
     <div
       key={key}
-      className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active"
+      className="flex items-center justify-between lg:justify-normal lg:odd:flex-row-reverse group is-active"
     >
       {/** Icon */}
-      <div className="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-300 group-[.is-active]:bg-emerald-500 text-slate-500 hover:bg-emerald-800 group-[.is-active]:text-emerald-500 shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+      <div className="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-300 group-[.is-active]:bg-emerald-500 text-slate-500 hover:bg-emerald-800 group-[.is-active]:text-emerald-500 shrink-0 md:order-1 lg:group-odd:-translate-x-1/2 lg:group-even:translate-x-1/2 max-lg:hidden">
         <Image src={Briefcase} alt="briefcase" width={20} height={20} />
       </div>
       {/** Card */}
-      <div className="w-100 md:w-[calc(50%-2.5rem)] p-4 rounded border border-slate-200 shadow">
+      <div className="lg:w-[calc(50%-2.5rem)] p-4 rounded border border-slate-200 shadow">
         <Card>
-          <CardHeader>
+          <CardHeader className="">
             <CardTitle>{data.Title}</CardTitle>
             <CardDescription>@{data.Company}</CardDescription>
             <CardDescription>{data.StartDate} - {data.EndDate}</CardDescription>
