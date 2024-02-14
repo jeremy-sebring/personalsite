@@ -37,7 +37,7 @@ export default function RootLayout({
         <header className="">
           <NavBar />
         </header>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem enableColorScheme>
           <ThemeSwitcher />
           <main className="">
             {children}
