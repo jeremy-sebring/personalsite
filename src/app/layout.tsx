@@ -6,7 +6,6 @@ import "./globals.css";
 import NavBar from "../components/navbar";
 
 import { cn } from "../lib/utils";
-import { ThemeSwitcher } from "@/components/ThemeSwitcher";
 import  ThemeProvider  from "./theme-provider";
 
 const fontSans = FontSans({
