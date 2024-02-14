@@ -6,7 +6,6 @@ import "./globals.css";
 import NavBar from "../components/navbar";
 
 import { cn } from "../lib/utils";
-import { ThemeSwitcher } from "@/components/ThemeSwitcher";
 import  ThemeProvider  from "./theme-provider";
 
 const fontSans = FontSans({
@@ -34,11 +33,10 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
-        <header className="">
-          <NavBar />
-        </header>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem enableColorScheme>
-          <ThemeSwitcher />
+          <header className="">
+            <NavBar />
+          </header>
           <main className="">
             {children}
             <Analytics />
