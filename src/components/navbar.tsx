@@ -1,13 +1,14 @@
 'use client'
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Commander from "./Command";
 
 export default function NavBar() {
   const pathname = usePathname();
 
   return (
-    <nav className="left-0 top-0 sticky">
-      <ul className="flex flex-wrap list-none">
+    <nav className="left-0 top-0 sticky flex justify-between">
+      <ul className="basis 1/4 flex flex-wrap list-none ">
         <li className="mr-3">
           <Link
             className={`text-white-100 ${
@@ -47,6 +48,10 @@ export default function NavBar() {
           </Link>
         </li>
       </ul>
+      <div className="basis-1/4 pt-4">
+        <Commander/>
+      </div>
+      
     </nav>
   );
 }

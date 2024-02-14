@@ -34,11 +34,10 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
-        <header className="">
-          <NavBar />
-        </header>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem enableColorScheme>
-          <ThemeSwitcher />
+          <header className="">
+            <NavBar />
+          </header>
           <main className="">
             {children}
             <Analytics />
