@@ -102,9 +102,9 @@ export default function TimeLineCard(key: string, data: WorkHistoryCard) {
         <Image src={Briefcase} alt="briefcase" width={20} height={20} />
       </div>
       {/** Card */}
-      <div className="lg:w-[calc(50%-2.5rem)] p-4 rounded border border-slate-200 shadow">
-        <Card>
-          <CardHeader className="">
+      <div className="lg:w-[calc(50%-2.5rem)] p-4">
+        <Card className="drop-shadow-lg shadow shadow-emerald-400 border-emerald-400">
+          <CardHeader>
             <CardTitle>{data.Title}</CardTitle>
             <CardDescription>@{data.Company}</CardDescription>
             <CardDescription>{data.StartDate} - {data.EndDate}</CardDescription>
