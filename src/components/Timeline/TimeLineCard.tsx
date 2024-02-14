@@ -16,6 +16,9 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 
+import { ScrollArea } from "@/components/ui/scroll-area"
+
+
 import Image from "next/image";
 import Briefcase from "../../../public/briefcase.svg";
 
@@ -41,6 +44,7 @@ function getAchievements(data: WorkHistoryCard) {
                   Learn more?
                 </SheetTrigger>
                 <SheetContent className="w-1/4">
+                <ScrollArea className="h-full w-full">
                   <SheetHeader>
                     <SheetTitle>## {data.Title}</SheetTitle>
                     <SheetDescription className="text-left">
@@ -50,26 +54,23 @@ function getAchievements(data: WorkHistoryCard) {
                           {data.StartDate} - {data.EndDate}
                         </p>
                       </div>
-                      <hr />
                       <div className="pb-4">
-                        <h3 className="text-lg font-bold text-white">
+                        <h3 className="">
                           ### What is {data.Company}?
                         </h3>
                         <p>{data.CompanyDescription}</p>
                       </div>
                       <div className="pb-4">
-                        <h3 className="text-lg font-bold text-white">
+                        <h3 className="">
                           ### Summary
                         </h3>
-                        <hr />
                         <p>{data.Summary}</p>
                       </div>
   
                       <div>
-                        <h3 className="text-lg font-bold text-white">
+                        <h3 className="">
                           ### Achievements
                         </h3>
-                        <hr />
                         <ul>
                           {data.Achievements.map((achievement, index) => (
                             <li key={index} className="pb-2">
@@ -80,6 +81,7 @@ function getAchievements(data: WorkHistoryCard) {
                       </div>
                     </SheetDescription>
                   </SheetHeader>
+                  </ScrollArea>
                 </SheetContent>
               </Sheet>
            </CardFooter>
