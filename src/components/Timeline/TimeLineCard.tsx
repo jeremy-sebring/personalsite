@@ -16,8 +16,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 
-import { ScrollArea } from "@/components/ui/scroll-area"
-
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 import Image from "next/image";
 import Briefcase from "../../../public/briefcase.svg";
@@ -36,62 +35,50 @@ function getFeaturedAchievement(data: WorkHistoryCard) {
 }
 
 function getAchievements(data: WorkHistoryCard) {
-
   return (
     <CardFooter>
-              <Sheet>
-                <SheetTrigger className="hover:underline">
-                  Learn more?
-                </SheetTrigger>
-                <SheetContent className="w-1/4">
-                <ScrollArea className="h-full w-full">
-                  <SheetHeader>
-                    <SheetTitle>## {data.Title}</SheetTitle>
-                    <SheetDescription className="text-left">
-                      <div className="pb-4">
-                        <p className="">@{data.Company}</p>
-                        <p>
-                          {data.StartDate} - {data.EndDate}
-                        </p>
-                      </div>
-                      <div className="pb-4">
-                        <h3 className="">
-                          ### What is {data.Company}?
-                        </h3>
-                        <p>{data.CompanyDescription}</p>
-                      </div>
-                      <div className="pb-4">
-                        <h3 className="">
-                          ### Summary
-                        </h3>
-                        <p>{data.Summary}</p>
-                      </div>
-  
-                      <div>
-                        <h3 className="">
-                          ### Achievements
-                        </h3>
-                        <ul>
-                          {data.Achievements.map((achievement, index) => (
-                            <li key={index} className="pb-2">
-                              {achievement.text}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </SheetDescription>
-                  </SheetHeader>
-                  </ScrollArea>
-                </SheetContent>
-              </Sheet>
-           </CardFooter>
-  )
+      <Sheet>
+        <SheetTrigger className="hover:underline">Learn more?</SheetTrigger>
+        <SheetContent className="w-1/4">
+          <ScrollArea className="h-full w-full">
+            <SheetHeader>
+              <SheetTitle>## {data.Title}</SheetTitle>
+              <SheetDescription className="text-left">
+                <div className="pb-4">
+                  <p className="">@{data.Company}</p>
+                  <p>
+                    {data.StartDate} - {data.EndDate}
+                  </p>
+                </div>
+                <div className="pb-4">
+                  <h3 className="">### What is {data.Company}?</h3>
+                  <p>{data.CompanyDescription}</p>
+                </div>
+                <div className="pb-4">
+                  <h3 className="">### Summary</h3>
+                  <p>{data.Summary}</p>
+                </div>
+
+                <div>
+                  <h3 className="">### Achievements</h3>
+                  <ul>
+                    {data.Achievements.map((achievement, index) => (
+                      <li key={index} className="pb-2">
+                        {achievement.text}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </SheetDescription>
+            </SheetHeader>
+          </ScrollArea>
+        </SheetContent>
+      </Sheet>
+    </CardFooter>
+  );
 }
 
-
-
 export default function TimeLineCard(key: string, data: WorkHistoryCard) {
-  
   const achievementsExist = data.Achievements.length > 0;
 
   return (
@@ -109,12 +96,14 @@ export default function TimeLineCard(key: string, data: WorkHistoryCard) {
           <CardHeader>
             <CardTitle>{data.Title}</CardTitle>
             <CardDescription>@{data.Company}</CardDescription>
-            <CardDescription>{data.StartDate} - {data.EndDate}</CardDescription>
+            <CardDescription>
+              {data.StartDate} - {data.EndDate}
+            </CardDescription>
           </CardHeader>
           <CardContent>
-            <p>{achievementsExist ? getFeaturedAchievement(data): ""}</p>
+            <p>{achievementsExist ? getFeaturedAchievement(data) : ""}</p>
           </CardContent>
-          {achievementsExist? getAchievements(data) : ""}
+          {achievementsExist ? getAchievements(data) : ""}
         </Card>
       </div>
     </div>
