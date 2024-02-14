@@ -19,9 +19,9 @@ const WorkHistoryJSON = JSON.parse(
 export default function work() {
   return (
     <div>
-        <div className="flex  flex-wrap justify-evenly content-center">
-            <h2># Work Experience</h2>
-            <MusicToggle/>
+        <div className="flex flex-wrap">
+            <h2 className="text-center basis-1/2">## Work Experience</h2>
+            <MusicToggle className="z-50 content-center items-center text-center basis-1/2 prose-lg"/>
         </div>
        
         {Timeline(WorkHistoryJSON)}
