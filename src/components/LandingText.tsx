@@ -4,13 +4,14 @@ import { motion } from "framer-motion";
 interface LandingTextProps {
     children: React.ReactNode[];
     className?: string;
+    parentClassName?: string;
 }
 
 
 export default function LandingText(props: LandingTextProps) {
 
     return(
-        <>
+        <div className={props.parentClassName ? props.parentClassName : ""}>
         {props.children.map((el, i) => (
           <motion.span
             initial={{ opacity: 0 }}
@@ -25,7 +26,7 @@ export default function LandingText(props: LandingTextProps) {
             {el}
           </motion.span>
         ))}
-        </>
+        </div>
 
     )
 }
