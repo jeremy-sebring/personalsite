@@ -1,0 +1,30 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider     = "mysql"
+  url          = env("DATABASE_URL")
+  relationMode = "prisma"
+}
+
+model posts {
+  id         Int      @id @default(autoincrement())
+  slug       String   @db.VarChar(255) @unique
+  title      String   @db.VarChar(255)
+  meta_data  Json?
+  markdown   String   @db.Text
+  created_at DateTime @db.DateTime(0)
+  updated_at DateTime @db.DateTime(0)
+}
+
+model tagmembership {
+  id      Int @id @default(autoincrement())
+  post_id Int
+  tag_id  Int
+}
+
+model tags {
+  id   Int    @id @default(autoincrement())
+  name String @db.VarChar(255)
+}
