@@ -28,7 +28,6 @@ export default function AboutPage() {
                         <li>To showcase my work</li>
                         <li>To showcase my skills</li>
                         <li>To showcase my personality</li>
-                        <li>To showcase my personality</li>
                         <li>To have a place to write about my outdoor activities</li>
 
                     </ol>
