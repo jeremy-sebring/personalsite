@@ -2,7 +2,7 @@ import Timeline from "@/components/Timeline";
 import MusicToggle from "@/components/MusicToggle";
 
 
-import { WorkHistoryCard }from "@/app/types";
+import { WorkHistoryCard }from "@/types";
 
 import fs from 'fs'
 import path from 'path'
