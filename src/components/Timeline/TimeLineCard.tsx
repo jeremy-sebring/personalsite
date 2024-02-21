@@ -19,7 +19,7 @@ import {
 import { ScrollArea } from "@/components/ui/scroll-area";
 
 import Image from "next/image";
-import Briefcase from "@/public/briefcase.svg";
+import Briefcase from "/public/briefcase.svg";
 
 import { WorkHistoryCard } from "@/types";
 
