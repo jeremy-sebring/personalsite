@@ -14,7 +14,7 @@ import { Suspense } from "react";
 async function ReadyPosts() {
     const posts = await getPosts();
     return (
-      <div className="w-2/3 self-center mx-10 grid grid-cols-3 gap-3 ">
+      <div className="w-2/3 mx-10 grid grid-cols-3 gap-3 ">
         {posts.map((post) => (
           <Card className="" key={post.id}>
             <CardHeader>
@@ -35,7 +35,7 @@ async function ReadyPosts() {
 export default function Blog() {
 
     return (
-        <div>
+        <div className="container">
             <h1>Blog</h1>
             <Suspense fallback={<p>Loading...</p>}>
                 <ReadyPosts />
