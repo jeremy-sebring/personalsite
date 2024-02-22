@@ -21,7 +21,6 @@ async function ReadyPosts() {
               <CardTitle><Link href={`/blog/${post.slug}`}>{post.title}</Link></CardTitle>
             </CardHeader>
             <CardContent>
-                lorem ipsum
             </CardContent>
             <CardFooter>
               <p className="text-slate-400 text-sm"> Updated @ {post.updated_at.toString()}</p>
@@ -42,6 +41,4 @@ export default function Blog() {
             </Suspense>
         </div>
     )
-
-    
 }
