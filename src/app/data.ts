@@ -1,11 +1,17 @@
-import prisma from '@/lib/prisma'
+import {PrismaClient, Prisma} from '@prisma/client'
 
 
-export async function getPosts(){
+const prisma = new PrismaClient()
+
+export type CreatePost = Prisma.postsCreateInput
+
+export async function getPosts(limit?: number, offset?: number){
     const posts = await prisma.posts.findMany({
         orderBy:{
            updated_at: 'desc'
         },
+        take: limit ? limit : 10,
+        skip: offset ? offset : 0
     })
     return posts
 }
@@ -18,3 +24,19 @@ export async function getPost(slug: string){
     })
     return post
 }
+
+
+export async function createPost(data: CreatePost){
+    const date = new Date()
+    const newPost = await prisma.posts.create({
+        data: {
+            title: data.title,
+            slug: data.slug,
+            markdown: data.markdown,
+            updated_at: date,
+            created_at: date
+        }
+    })
+    return newPost
+}
+
