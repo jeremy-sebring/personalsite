@@ -11,7 +11,6 @@ import { getPosts } from "../data";
 
 import Link from "next/link";
 import { Suspense } from "react";
-  
 async function ReadyPosts() {
     const posts = await getPosts();
     return (

@@ -41,3 +41,18 @@ export async function createPost(data: CreatePost){
     return newPost
 }
 
+export async function updatePost(slug: string, data: CreatePost){
+    const date = new Date()
+    const updatedPost = await prisma.posts.update({
+        where:{
+            slug: slug
+        },
+        data: {
+            title: data.title,
+            markdown: data.markdown.replace(/\\n/g, '\n'),
+            description: data.description,
+            updated_at: date
+        }
+    })
+    return updatedPost
+}
