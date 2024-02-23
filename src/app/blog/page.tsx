@@ -1,3 +1,4 @@
+
 import {
     Card,
     CardContent,
@@ -21,6 +22,7 @@ async function ReadyPosts() {
               <CardTitle><Link href={`/blog/${post.slug}`}>{post.title}</Link></CardTitle>
             </CardHeader>
             <CardContent>
+                {post.description}
             </CardContent>
             <CardFooter>
               <p className="text-slate-400 text-sm"> Updated @ {post.updated_at.toString()}</p>

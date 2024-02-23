@@ -32,7 +32,7 @@ export async function createPost(data: CreatePost){
         data: {
             title: data.title,
             slug: data.slug,
-            markdown: data.markdown,
+            markdown: data.markdown.replace(/\\n/g, '\n'),
             description: data.description,
             updated_at: date,
             created_at: date
