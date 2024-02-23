@@ -1,10 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
 
 import { APIResponse } from "@/types";
-import { CreatePost, getPost, updatePost } from "@/app/data";
+import { getPost, updatePost } from "@/app/data";
 
 import { AuthRequired } from "@/lib/apiauth";
-
 
 export const dynamic = "force-dynamic"; // defaults to auto
 export async function GET(
@@ -35,9 +34,9 @@ export async function GET(
 }
 
 export async function POST(
-       request: NextRequest,
-       { params }: { params: { slug: string } }
-       ) {
+  request: NextRequest,
+  { params }: { params: { slug: string } }
+) {
   const auth = AuthRequired(request);
 
   if (auth) {
@@ -45,7 +44,7 @@ export async function POST(
   }
 
   if (request.body) {
-    const body = await request.json()
+    const body = await request.json();
     const post = await updatePost(params.slug, body);
     const data: APIResponse = {
       status: "success",
