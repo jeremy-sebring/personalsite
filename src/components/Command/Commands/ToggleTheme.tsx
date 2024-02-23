@@ -17,7 +17,6 @@ export default function ToggleTheme() {
 
     useEffect(() => {
         setMounted(true);
-        console.log(theme)
         if (!isDark) {
             if (theme === "dark") {
                 setIsDark(true);

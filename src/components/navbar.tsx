@@ -43,7 +43,12 @@ export default function NavBar() {
         </li>
         <li className="pr-3">|</li>
         <li className="mr-3">
-          <Link className="text-white-100 line-through decoration-red-400 decoration-4" href=" ">
+        <Link
+            className={`text-white-100 ${
+              pathname === "/blog" ? "" : "hover:text-gray-300"
+            }`}
+            href="/blog"
+          >
             Blog
           </Link>
         </li>

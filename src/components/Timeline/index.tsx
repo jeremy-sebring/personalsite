@@ -1,5 +1,5 @@
 import TimeLineCard from "./TimeLineCard"
-import { WorkHistoryCard } from "@/app/types"
+import { WorkHistoryCard } from "@/types"
 
 
 

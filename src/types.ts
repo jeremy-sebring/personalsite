@@ -32,3 +32,8 @@ export type WorkHistoryAchievement = {
     text: string;
     isFeatured: boolean;
 }
+
+export type APIResponse = {
+    status: "success" | "error" | "KEEP OUT!";
+    data: object | null;
+}

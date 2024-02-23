@@ -44,14 +44,12 @@ async function HostRouting(req: NextRequest) {
     }
 
 
-
-    // rewrite everything else to `/[domain]/[slug] dynamic route
-    //return NextResponse.rewrite(new URL(`/${hostname}${path}`, req.url));
+    if ( hostname === "blog" ) {
+        return  NextResponse.rewrite(new URL(`/blog`, req.url));
+    }
 }
 
 
 export default async function middleware(req: NextRequest) {
-
-    return HostRouting(req)
-
+    return await HostRouting(req);
 } 
