@@ -33,6 +33,7 @@ export async function createPost(data: CreatePost){
             title: data.title,
             slug: data.slug,
             markdown: data.markdown,
+            description: data.description,
             updated_at: date,
             created_at: date
         }

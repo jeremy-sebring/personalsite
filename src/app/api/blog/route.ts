@@ -60,7 +60,7 @@ export async function POST(request: NextRequest) {
   if (request.body) {
     const data = await request.json();
 
-    if (data.title && data.slug && data.markdown) {
+    if (data.title && data.slug && data.markdown && data.description) {
       const newPost = await createPost(data);
 
       const response: APIResponse = {

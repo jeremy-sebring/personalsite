@@ -14,6 +14,7 @@ model posts {
   title      String   @db.VarChar(255)
   meta_data  Json?
   markdown   String   @db.LongText
+  description String  @db.Text
   created_at DateTime @db.DateTime(0)
   updated_at DateTime @db.DateTime(0)
 }
