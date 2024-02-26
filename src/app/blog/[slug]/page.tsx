@@ -2,9 +2,10 @@ import { getPost } from "@/app/data";
 import { PostProps } from "@/types";
 import { compileMDX } from "next-mdx-remote/rsc";
 
-export default async function Post(postProps: PostProps) {
-  const post = await getPost(postProps.params.slug);
+import { Suspense } from "react";
 
+async function NewPost(slug: string) {
+  const post = await getPost(slug);
   if (!post) {
     return (
       <div>
@@ -22,4 +23,12 @@ export default async function Post(postProps: PostProps) {
       </div>
     );
   }
+
+}
+
+export default async function Post(postProps: PostProps) {
+
+  <Suspense fallback={<div>Loading...</div>}>
+    {await NewPost(postProps.params.slug)}
+  </Suspense>
 }
