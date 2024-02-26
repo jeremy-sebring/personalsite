@@ -2,7 +2,6 @@ import { getPost } from "@/app/data";
 import { PostProps } from "@/types";
 import { compileMDX } from "next-mdx-remote/rsc";
 
-export const dynamic = "force-dynamic";
 export default async function Post(postProps: PostProps) {
   const post = await getPost(postProps.params.slug);
 
