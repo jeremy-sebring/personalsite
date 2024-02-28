@@ -7,6 +7,7 @@ import type { Container, Engine } from "@tsparticles/engine";
 import { loadSlim } from "@tsparticles/slim";
 import { cn } from "@/lib/utils";
 import { motion, useAnimation } from "framer-motion";
+import { useTheme } from "next-themes";
 
 type ParticlesProps = {
   id?: string;
@@ -19,6 +20,20 @@ type ParticlesProps = {
   particleColor?: string;
   particleDensity?: number;
 };
+
+function getParticlesColor(theme: string | undefined, particleColor: string | undefined) {
+  if (particleColor) {
+    return particleColor;
+  } else if (theme) {
+    if (theme === "dark") {
+      return "#ffffff";
+    } else {
+        return "#000000";
+    }
+  }
+  return "#000000";
+}
+
 export const SparklesCore = (props: ParticlesProps) => {
   const {
     id,
@@ -31,6 +46,8 @@ export const SparklesCore = (props: ParticlesProps) => {
     particleDensity,
   } = props;
   const [init, setInit] = useState(false);
+  const { theme } = useTheme();
+
   useEffect(() => {
     initParticlesEngine(async (engine) => {
       await loadSlim(engine);
@@ -42,7 +59,6 @@ export const SparklesCore = (props: ParticlesProps) => {
 
   const particlesLoaded = async (container?: Container) => {
     if (container) {
-      console.log(container);
       controls.start({
         opacity: 1,
         transition: {
@@ -123,7 +139,7 @@ export const SparklesCore = (props: ParticlesProps) => {
                 },
               },
               color: {
-                value: particleColor || "#ffffff",
+                value: getParticlesColor(theme, particleColor),
                 animation: {
                   h: {
                     count: 0,
