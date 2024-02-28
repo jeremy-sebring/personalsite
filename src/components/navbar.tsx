@@ -3,6 +3,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Commander from "./Command";
 
+
 export default function NavBar() {
   const pathname = usePathname();
 
