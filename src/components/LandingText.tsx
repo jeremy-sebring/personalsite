@@ -27,6 +27,5 @@ export default function LandingText(props: LandingTextProps) {
           </motion.span>
         ))}
         </div>
-
     )
 }
