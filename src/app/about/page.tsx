@@ -8,7 +8,6 @@ export default function AboutPage() {
     return (
         <section className="container">
             <h2># Hello! I'm Jeremy Sebring.</h2>
-
             <h3>## A little about me:</h3>
 
             <p>I am an experienced software engineering, DevOps, and infrastructure professional. Most elements of a modern tech stack I have worked with in multiple contexts and capacities.
