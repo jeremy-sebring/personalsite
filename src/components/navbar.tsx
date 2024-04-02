@@ -45,10 +45,8 @@ export default function NavBar() {
         <li className="pr-3">|</li>
         <li className="mr-3">
         <Link
-            className={`text-white-100 ${
-              pathname === "/blog" ? "" : "hover:text-gray-300"
-            }`}
-            href="/blog"
+            className="text-white-100 line-through decoration-2	 decoration-red-500"
+            href="#"
           >
             Blog
           </Link>
@@ -57,7 +55,6 @@ export default function NavBar() {
       <div className="basis-1/4 pt-4">
         <Commander/>
       </div>
-      
     </nav>
   );
 }
