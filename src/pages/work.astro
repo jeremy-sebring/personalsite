@@ -1,0 +1,23 @@
+---
+import Base from '@/layouts/Base.astro';
+import Timeline from '@/components/Timeline/Timeline.astro';
+import MusicToggle from '@/components/MusicToggle';
+import workHistory from '../../public/work_history.json';
+import type { WorkHistoryCard } from '@/types';
+
+const data = workHistory as WorkHistoryCard[];
+---
+
+<Base title="Work — Jeremy Sebring">
+  <div>
+    <div class="flex flex-wrap">
+      <h2 class="text-center basis-1/2">## Work Experience</h2>
+      <MusicToggle
+        client:load
+        className="z-50 content-center items-center text-center basis-1/2 prose-lg"
+      />
+    </div>
+
+    <Timeline data={data} />
+  </div>
+</Base>

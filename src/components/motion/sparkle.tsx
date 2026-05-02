@@ -1,13 +1,9 @@
-"use client";
-import type { NextPage } from "next";
-import React from "react";
 import { useEffect, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
-import type { Container, Engine } from "@tsparticles/engine";
+import type { Container } from "@tsparticles/engine";
 import { loadSlim } from "@tsparticles/slim";
 import { cn } from "@/lib/utils";
 import { motion, useAnimation } from "framer-motion";
-import { useTheme } from "next-themes";
 
 type ParticlesProps = {
   id?: string;
@@ -21,15 +17,16 @@ type ParticlesProps = {
   particleDensity?: number;
 };
 
+function readTheme(): "dark" | "light" {
+  if (typeof document === "undefined") return "dark";
+  return document.documentElement.classList.contains("dark") ? "dark" : "light";
+}
+
 function getParticlesColor(theme: string | undefined, particleColor: string | undefined) {
   if (particleColor) {
     return particleColor;
-  } else if (theme) {
-    if (theme === "dark") {
-      return "#ffffff";
-    } else {
-        return "#000000";
-    }
+  } else if (theme === "dark") {
+    return "#ffffff";
   }
   return "#000000";
 }
@@ -46,7 +43,14 @@ export const SparklesCore = (props: ParticlesProps) => {
     particleDensity,
   } = props;
   const [init, setInit] = useState(false);
-  const { theme } = useTheme();
+  const [theme, setTheme] = useState<"dark" | "light">("dark");
+
+  useEffect(() => {
+    setTheme(readTheme());
+    const observer = new MutationObserver(() => setTheme(readTheme()));
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     initParticlesEngine(async (engine) => {

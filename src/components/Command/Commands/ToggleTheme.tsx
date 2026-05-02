@@ -1,43 +1,45 @@
+import { useEffect, useState } from 'react';
 
-'use client'
+import { CommandItem } from '@/components/ui/command';
+import { Switch } from '@/components/ui/switch';
+import { Label } from '@/components/ui/label';
 
-import { CommandItem } from "@/components/ui/command";
-import {useEffect, useState} from "react";
+function readTheme(): 'dark' | 'light' {
+  if (typeof document === 'undefined') return 'dark';
+  return document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+}
 
-import { useTheme } from "next-themes";
-import { Switch } from "@/components/ui/switch";
-import { Label } from "@/components/ui/label";
+function applyTheme(theme: 'dark' | 'light') {
+  document.documentElement.classList.toggle('dark', theme === 'dark');
+  document.documentElement.style.colorScheme = theme;
+  localStorage.setItem('theme', theme);
+  document.dispatchEvent(new CustomEvent('themechange', { detail: { theme } }));
+}
 
 export default function ToggleTheme() {
-    const [mounted, setMounted] = useState(false);
-    const [isDark, setIsDark] = useState(false);
-    const {theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+  const [isDark, setIsDark] = useState(false);
 
+  useEffect(() => {
+    setMounted(true);
+    setIsDark(readTheme() === 'dark');
+  }, []);
 
+  if (!mounted) {
+    return null;
+  }
 
-    useEffect(() => {
-        setMounted(true);
-        if (!isDark) {
-            if (theme === "dark") {
-                setIsDark(true);
-            }
-        };
-    }, [isDark, theme]);
-
-
-    if (!mounted) {
-        return null;
-    }
-
-
-    return (
-
-        <CommandItem className="flex justify-between">
-            <Label>Dark Mode</Label>
-            <Switch checked={isDark} onCheckedChange={() => {
-                setTheme(isDark ? "light" : "dark");
-                setIsDark(!isDark);
-            }} />
-        </CommandItem>
-    );
-    };
+  return (
+    <CommandItem className="flex justify-between">
+      <Label>Dark Mode</Label>
+      <Switch
+        checked={isDark}
+        onCheckedChange={() => {
+          const next = isDark ? 'light' : 'dark';
+          applyTheme(next);
+          setIsDark(!isDark);
+        }}
+      />
+    </CommandItem>
+  );
+}

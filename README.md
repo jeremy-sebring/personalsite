@@ -1,24 +1,37 @@
+# Jeremy Sebring's Personal Website
 
-# Jeremy Sebring's Personal Web Site
+Built with [Astro](https://astro.build) + React islands, styled with Tailwind CSS and shadcn/ui, deployed on Cloudflare Pages.
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
-
-yarn dev
-
+corepack enable
+pnpm install
+pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:4321](http://localhost:4321).
 
+## Scripts
 
-## Learn More
+| Command         | Action                                       |
+| --------------- | -------------------------------------------- |
+| `pnpm dev`      | Start the local dev server                   |
+| `pnpm build`    | Build the static site to `./dist/`           |
+| `pnpm preview`  | Preview the production build locally         |
+| `pnpm check`    | Run `astro check` for type-checking          |
 
-To learn more about Next.js, take a look at the following resources:
+## Deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The site builds to a fully static `dist/` and is served by Cloudflare Pages.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- **Framework preset:** Astro
+- **Build command:** `pnpm build`
+- **Output directory:** `dist`
+- **Node version:** 20
+
+Cloudflare Pages auto-detects `pnpm-lock.yaml` and uses pnpm.
+
+### Cloudflare Web Analytics
+
+Set `PUBLIC_CF_ANALYTICS_TOKEN` in the Pages project's environment variables to enable the beacon.
