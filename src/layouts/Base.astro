@@ -1,0 +1,75 @@
+---
+import '@/styles/global.css';
+import { cn } from '@/lib/utils';
+import NavBar from '@/components/navbar';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Jeremy Sebring',
+  description = 'Software Engineering Manager, Full Stack Engineer, Outdoor Enthusiast.',
+} = Astro.props;
+
+const currentPath = Astro.url.pathname;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@400;500;600;700&display=swap"
+    />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    {/* Apply persisted theme before paint to avoid FOUC */}
+    <script is:inline>
+      (function () {
+        try {
+          var stored = localStorage.getItem('theme');
+          var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var theme = stored ?? (prefersDark ? 'dark' : 'dark');
+          document.documentElement.classList.toggle('dark', theme === 'dark');
+          document.documentElement.style.colorScheme = theme;
+        } catch (_) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
+
+    {/* Cloudflare Web Analytics — replace token in dashboard, then enable */}
+    {
+      import.meta.env.PUBLIC_CF_ANALYTICS_TOKEN && (
+        <script
+          is:inline
+          defer
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon={`{"token": "${import.meta.env.PUBLIC_CF_ANALYTICS_TOKEN}"}`}
+        />
+      )
+    }
+  </head>
+  <body
+    class={cn(
+      'bg-background max-w-none font-sans antialiased prose prose-slate dark:prose-invert'
+    )}
+    style="font-family: 'Noto Sans Mono', ui-monospace, SFMono-Regular, Menlo, monospace;"
+  >
+    <header>
+      <NavBar client:load currentPath={currentPath} />
+    </header>
+    <main>
+      <slot />
+    </main>
+  </body>
+</html>

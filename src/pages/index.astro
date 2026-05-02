@@ -1,0 +1,35 @@
+---
+import { Image } from 'astro:assets';
+import Base from '@/layouts/Base.astro';
+import LandingText from '@/components/LandingText';
+import { SparklesCore } from '@/components/motion/sparkle';
+import Logo from '@/assets/NewSiteLogo.png';
+
+const lines = [
+  { tag: 'h2' as const, html: '# Welcome!' },
+  { tag: 'h2' as const, html: "# I'm Jeremy Sebring" },
+  {
+    tag: 'h3' as const,
+    html: '<span class="italic">*Software Engineering Manager* </span> | <span class="italic">*Full Stack Engineer*</span> | <span class="italic">*Outdoor Enthusiast*</span>',
+  },
+];
+---
+
+<Base>
+  <div class="w-full absolute z-10 h-screen">
+    <SparklesCore
+      client:idle
+      id="tsparticlesfullpage"
+      background="transparent"
+      minSize={0.6}
+      maxSize={1.4}
+      particleDensity={100}
+      className="w-full h-full"
+    />
+  </div>
+
+  <div class="w-full grid justify-items-center gap-0 text-white relative z-20">
+    <LandingText client:visible lines={lines} />
+    <Image src={Logo} alt="Jeremy Sebring Logo" class="max-w-lg" />
+  </div>
+</Base>

@@ -48,6 +48,14 @@ Temporary Items
 /.next/
 /out/
 
+# astro
+/.astro/
+/dist/
+
+# cloudflare / wrangler
+/.wrangler/
+.dev.vars
+
 # production
 /build
 
