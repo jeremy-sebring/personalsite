@@ -28,7 +28,7 @@ The site builds to a fully static `dist/` and is served by Cloudflare Pages.
 - **Framework preset:** Astro
 - **Build command:** `pnpm build`
 - **Output directory:** `dist`
-- **Node version:** 20
+- **Node version:** 22 (Cloudflare's Workers Builds image caps at 22 as of 2026-06; bump to 24 when their image picks it up)
 
 Cloudflare Pages auto-detects `pnpm-lock.yaml` and uses pnpm.
 
