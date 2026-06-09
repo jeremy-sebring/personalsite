@@ -1,23 +1,31 @@
 ---
 import Base from '@/layouts/Base.astro';
-import Timeline from '@/components/Timeline/Timeline.astro';
-import MusicToggle from '@/components/MusicToggle';
-import workHistory from '../../public/work_history.json';
-import type { WorkHistoryCard } from '@/types';
+import '@/styles/work.css';
+import WorkTimeline from '@/components/work/WorkTimeline';
+import { WORK } from '@/data/work';
 
-const data = workHistory as WorkHistoryCard[];
+const current = WORK.find((c) => c.current);
+const currentTitle = current?.roles[0]?.title ?? '';
 ---
 
 <Base title="Work — Jeremy Sebring">
-  <div>
-    <div class="flex flex-wrap">
-      <h2 class="text-center basis-1/2">## Work Experience</h2>
-      <MusicToggle
-        client:load
-        className="z-50 content-center items-center text-center basis-1/2 prose-lg"
-      />
-    </div>
+  <div class="sb-work not-prose">
+    <div class="sb-work-wrap">
+      <header class="sb-work-header">
+        <div>
+          <h2 class="md-h2">Work Experience</h2>
+          <p class="sb-work-sub">
+            <span class="md-em">{currentTitle}</span> &mdash; here&apos;s the trail that got me here.
+          </p>
+        </div>
+      </header>
 
-    <Timeline data={data} />
+      <svg class="sb-topo-div" viewBox="0 0 1000 40" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0,28 C120,12 200,34 320,22 C460,8 560,32 700,20 C820,10 900,30 1000,18" />
+        <path class="heavy" d="M0,34 C140,22 240,38 360,28 C500,16 620,36 760,26 C880,18 940,32 1000,26" />
+      </svg>
+
+      <WorkTimeline client:load data={WORK} />
+    </div>
   </div>
 </Base>

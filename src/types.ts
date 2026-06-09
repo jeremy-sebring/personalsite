@@ -17,22 +17,6 @@ export interface Card {
     
 }
 
-export type WorkHistoryCard = {
-    Title: string;
-    Company: string;
-    StartDate: string;
-    EndDate: string;
-    CompanyURL: string;
-    CompanyDescription: string;
-    Summary: string;
-    Achievements: WorkHistoryAchievement[];
-};
-
-export type WorkHistoryAchievement = {
-    text: string;
-    isFeatured: boolean;
-}
-
 export type APIResponse = {
     status: "success" | "error" | "KEEP OUT!";
     data: object | null;
