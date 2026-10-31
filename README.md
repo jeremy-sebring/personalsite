@@ -1,6 +1,6 @@
 # Jeremy Sebring's Personal Website
 
-Built with [Astro](https://astro.build) + React islands, styled with Tailwind CSS and shadcn/ui, deployed on Cloudflare Pages.
+Built with [Astro](https://astro.build) + React islands, styled with Tailwind CSS and shadcn/ui, deployed as static assets on Cloudflare Workers.
 
 ## Getting Started
 
@@ -23,15 +23,14 @@ Open [http://localhost:4321](http://localhost:4321).
 
 ## Deployment
 
-The site builds to a fully static `dist/` and is served by Cloudflare Pages.
+The site builds to a fully static `dist/` and is served by the `personalsite` Cloudflare Worker.
 
-- **Framework preset:** Astro
 - **Build command:** `pnpm build`
 - **Output directory:** `dist`
-- **Node version:** 22 (Cloudflare's Workers Builds image caps at 22 as of 2026-06; bump to 24 when their image picks it up)
+- **Node version:** 22.23.4 or newer in the Node 22 release line (see `.nvmrc`)
 
-Cloudflare Pages auto-detects `pnpm-lock.yaml` and uses pnpm.
+Cloudflare Workers Builds installs the pinned pnpm version, runs `pnpm build`, and deploys `dist/` using `npx wrangler deploy` when `main` changes.
 
 ### Cloudflare Web Analytics
 
-Set `PUBLIC_CF_ANALYTICS_TOKEN` in the Pages project's environment variables to enable the beacon.
+Set `PUBLIC_CF_ANALYTICS_TOKEN` in the Worker build's environment variables to enable the beacon.
